@@ -1,0 +1,6 @@
+.custom-button {
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+    padding: 0.75rem 1.5rem; /* Aumenta el padding */
+    min-width: 150px; /* Asegúrate de que el ancho mínimo esté establecido */
+    line-height: 1.5; /* Aumenta la altura de la línea si es necesario */
+}

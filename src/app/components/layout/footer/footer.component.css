@@ -1,0 +1,19 @@
+.grid {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121; /* Fondo oscuro */
+  }
+  
+  p {
+    color: #fafafa;
+    font-size: 0.8rem;
+  }
+  
+  @media (max-width: 768px) {
+    p {
+      font-size: 0.7rem;
+    }
+  }
+  

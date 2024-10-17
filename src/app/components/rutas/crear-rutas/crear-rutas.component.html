@@ -1,0 +1,84 @@
+<p-card header="Crear Rutas" [style]="{ width: '100%' }">
+    <div>
+      <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+        <div class="grid">
+          <div class="col-12 sm:col-6">
+            <div class="mb-3">
+              <label for="sucursalOrigenId">Sucursal Origen</label>
+              <p-dropdown 
+                [options]="sucursales" 
+                formControlName="sucursalOrigenId" 
+                [showClear]="true" 
+                placeholder="Selecciona una Sucursal" 
+                [optionLabel]="'nombre'" 
+                [optionValue]="'id'" 
+                id="sucursalOrigenId">
+              </p-dropdown>
+              <div *ngIf="sucursalOrigenId?.invalid && (sucursalOrigenId?.touched || sucursalOrigenId?.dirty)" class="error-message">
+                Debes seleccionar una sucursal de origen.
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-12 sm:col-6">
+            <div class="mb-3">
+              <label for="sucursalDestinoId">Sucursal Destino</label>
+              <p-dropdown 
+                [options]="sucursales" 
+                formControlName="sucursalDestinoId" 
+                [showClear]="true" 
+                placeholder="Selecciona una Sucursal" 
+                [optionLabel]="'nombre'" 
+                [optionValue]="'id'" 
+                id="sucursalDestinoId">
+              </p-dropdown>
+              <div *ngIf="sucursalDestinoId?.invalid && (sucursalDestinoId?.touched || sucursalDestinoId?.dirty)" class="error-message">
+                Debes seleccionar una sucursal de destino.
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="grid">
+          <div class="col-12 sm:col-6">
+            <div class="p-inputgroup mb-1">
+              <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+              <input class="w-12" type="number" pInputText formControlName="distanciaKm" placeholder="Distancia en Km" title="Distancia en Km">         
+            </div>
+          </div>
+  
+          <div class="col-12 sm:col-6">
+            <div class="p-inputgroup mb-1">
+              <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
+              <input class="w-12" type="number" pInputText formControlName="tiempoEstimadoHoras" placeholder="Tiempo Estimado en Horas" title="Tiempo Estimado en Horas">          
+            </div>
+          </div>
+        </div>
+  
+        <div class="flex justify-content-center flex-wrap">
+          <button 
+            pButton 
+            pRipple
+            label="Guardar"
+            icon="pi pi-save"
+            severity="info"
+            class="mr-4"
+            type="submit"
+            [disabled]="form.invalid" 
+          ></button>
+  
+          <button 
+            pButton 
+            pRipple
+            label="Cancelar"
+            icon="pi pi-times-circle"
+            severity="warning"
+            class="mr-4"
+            type="button"
+            (click)="cancel()"
+          ></button>
+        </div>
+      </form> 
+    </div>
+  </p-card>
+  

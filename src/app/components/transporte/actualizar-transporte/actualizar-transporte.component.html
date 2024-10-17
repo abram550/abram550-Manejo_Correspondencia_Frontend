@@ -1,0 +1,54 @@
+<p-card header="Actualizar Transporte" [style]="{ width: '100%' }">
+    <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+        <div class="grid">
+            <div class="col-12 sm:col-6">
+                <div class="p-inputgroup mb-1">
+                    <span class="p-inputgroup-addon"><i class="pi pi-car"></i></span>
+                    <select formControlName="tipoVehiculoId" class="w-12 p-dropdown">
+                        <option *ngFor="let tipo of tiposVehiculo" [value]="tipo.id">{{ tipo.descripcion }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-12 sm:col-6">
+                <div class="p-inputgroup mb-1">
+                    <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+                    <input class="w-12" type="text" pInputText formControlName="placa" placeholder="Placa" title="Placa">         
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12 sm:col-6">
+                <div class="p-inputgroup mb-1">
+                    <span class="p-inputgroup-addon"><i class="pi pi-cog"></i></span>
+                    <input class="w-12" type="number" pInputText formControlName="capacidadKg" placeholder="Capacidad (Kg)" title="Capacidad (Kg)">          
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-content-center flex-wrap">
+            <button 
+                pButton 
+                pRipple
+                label="Actualizar"
+                icon="pi pi-refresh"
+                severity="info"
+                class="mr-4"
+                type="submit"
+                [disabled]="form.invalid" 
+            ></button>
+
+            <button 
+                pButton 
+                pRipple
+                label="Cancelar"
+                icon="pi pi-times-circle"
+                severity="warning"
+                class="mr-4"
+                type="button"
+                (click)="cancel()"
+            ></button>
+        </div>
+    </form> 
+</p-card>

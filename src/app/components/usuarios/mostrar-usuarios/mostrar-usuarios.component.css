@@ -1,0 +1,45 @@
+/* Modo claro-oscuro para el p-card */
+body.light-dark-mode p-card {
+  background-color: #f2f2f2; /* Fondo gris claro */
+  color: #333; /* Texto oscuro */
+}
+
+/* Ajustes para los botones */
+body.light-dark-mode button {
+  background-color: #333; /* Fondo oscuro para botones */
+  color: #fff; /* Texto blanco */
+}
+
+/* Color del encabezado */
+body.light-dark-mode h3 {
+  color: #333; /* Encabezado oscuro */
+}
+
+/* Estilo de las celdas de la tabla */
+body.light-dark-mode th, body.light-dark-mode td {
+  background-color: #e0e0e0; /* Celdas más claras */
+  color: #333; /* Texto oscuro */
+}
+
+/* Estilo de la tabla */
+body.light-dark-mode p-table {
+  border-color: #333; /* Color del borde de la tabla */
+}
+
+/* Centrar texto en la tabla */
+.text-center {
+  text-align: center; /* Alinear texto al centro */
+}
+
+/* Espaciado para botones de acciones */
+.flex.justify-content-center {
+  display: flex; /* Usar flexbox para centrar elementos */
+  justify-content: center; /* Centrando elementos */
+}
+/* Título estilizado */
+.titulo {
+  font-size: 3rem; /* Aumentar el tamaño del título */
+  font-weight: bold; /* Negrita */
+  color: #212121; /* Color del texto */
+  margin-bottom: 0.10rem; /* Espacio entre título y descripción */
+}

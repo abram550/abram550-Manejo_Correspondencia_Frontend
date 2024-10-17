@@ -1,0 +1,68 @@
+<p-card class="w-12 h-full">
+    <ng-template pTemplate="header">
+        <div class="flex justify-content-between flex-wrap">
+            <!-- Título alineado a la izquierda con la clase 'titulo' -->
+            <h3 class="titulo ml-4"> <!-- Agregar la clase 'titulo' -->
+                Registro de usuarios
+            </h3>
+            <div class="mt-2 mr-2">
+                <a 
+                  pButton 
+                  pRipple
+                  label="Crear Usuario" 
+                  icon="pi pi-plus"
+                  class="bg-cyan-600"
+                  [routerLink]="['/usuarios/nuevo']">
+                </a>
+            </div>
+        </div>
+    </ng-template>
+
+    <p>
+        <p-table [value]="usuario" class="text-center"> <!-- Centrar el contenido de la tabla -->
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Tipo</th>
+                    <th class="flex justify-content-center flex-wrap">Acciones</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-usuarios>
+                <tr>
+                    <td>{{ usuarios.nombre }}</td>
+                    <td>{{ usuarios.direccion }}</td>
+                    <td>{{ usuarios.correo }}</td>
+                    <td>{{ usuarios.telefono }}</td>
+                    <td>{{ usuarios.tipoUsuario?.descripcion }}</td>
+                    <td class="flex justify-content-center"> <!-- Centrar acciones -->
+                        <button 
+                            pButton 
+                            pRipple
+                            icon="pi pi-print"
+                            class="bg-cyan-600 mr-1">
+                        </button>
+                        <a 
+                            pButton 
+                            pRipple
+                            icon="pi pi-sync"
+                            severity="warning"
+                            class="mr-1"
+                            [routerLink]="['/usuarios/edit', usuarios.id]">
+                        </a>
+                        <button 
+                            pButton 
+                            pRipple
+                            severity="danger"
+                            icon="pi pi-eraser"
+                            class="mr-1"
+                            (click)="eliminar(usuarios.id)">
+                        </button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p>
+</p-card>

@@ -1,0 +1,114 @@
+/* Modo claro-oscuro para el p-card */
+body.light-dark-mode p-card {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Texto oscuro */
+}
+
+/* Ajustes para los botones */
+body.light-dark-mode button {
+    background-color: #333; /* Fondo oscuro para botones */
+    color: #fff; /* Texto blanco */
+}
+
+/* Color del encabezado */
+body.light-dark-mode h3 {
+    color: #333; /* Encabezado oscuro */
+    text-align: left; /* Alinear el título a la izquierda */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilo de las celdas de la tabla */
+body.light-dark-mode th,
+body.light-dark-mode td {
+    background-color: #e0e0e0; /* Celdas más claras */
+    color: #333; /* Texto oscuro */
+}
+
+/* Estilo de la tabla */
+body.light-dark-mode p-table {
+    border-color: #333; /* Color del borde de la tabla */
+}
+
+/* Centrar texto en la tabla */
+.text-center {
+    text-align: center; /* Alinear texto al centro */
+}
+
+/* Estilo para el texto más pequeño */
+.small-text {
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+}
+
+/* Espaciado para botones de acciones */
+.flex.justify-content-center {
+    display: flex; /* Usar flexbox para centrar elementos */
+    justify-content: center; /* Centrando elementos */
+}
+
+/* Título estilizado */
+.titulo {
+    font-size: 3rem; /* Aumentar el tamaño del título */
+    font-weight: bold; /* Negrita */
+    color: #212121; /* Color del texto */
+    margin-bottom: 0.10rem; /* Espacio entre título y descripción */
+}
+
+/* Estilo específico para cada componente */
+p-card {
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+}
+
+/* Alineación y estilo de los encabezados */
+h3 {
+    font-weight: bold; /* Negrita */
+    margin: 0; /* Sin margen */
+}
+
+/* Ancho completo para las tarjetas */
+.w-12 {
+    width: 100%; /* Ancho del 100% */
+}
+
+/* Altura completa para las tarjetas */
+.h-full {
+    height: 100%; /* Altura del 100% */
+}
+
+/* Color de fondo específico */
+.bg-cyan-600 {
+    background-color: #06b6d4; /* Color cian */
+}
+
+/* Margen derecho */
+.mr-1 {
+    margin-right: 0.25rem; /* Espacio derecho */
+}
+
+/* Margen izquierdo */
+.ml-4 {
+    margin-left: 1rem; /* Espacio izquierdo */
+}
+
+/* Margen superior */
+.mt-2 {
+    margin-top: 0.5rem; /* Espacio superior */
+}
+
+/* Estilo de tablas */
+table {
+    width: 100%; /* Ancho completo para tablas */
+}
+
+/* Estilo de celdas */
+th,
+td {
+    text-align: left; /* Alinear texto a la izquierda */
+    padding: 8px; /* Espaciado interno */
+}
+
+/* Estilo de encabezados de tablas */
+th {
+    background-color: #f1f1f1; /* Fondo claro para encabezados */
+}

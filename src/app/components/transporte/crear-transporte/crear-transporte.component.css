@@ -1,0 +1,5 @@
+.same-width .p-inputgroup,
+.same-width p-dropdown,
+.same-width input {
+    width: 100%; /* Asegura que todos los campos tengan el mismo ancho */
+}

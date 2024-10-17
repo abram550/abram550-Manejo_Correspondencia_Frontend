@@ -1,0 +1,26 @@
+.card {
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  p-panelMenu {
+    width: 100%;
+  }
+  
+  .p-panelmenu .p-panelmenu-header {
+    background-color: #212121; /* Color para modo oscuro */
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .p-panelmenu .p-menuitem-link {
+    color: #333;
+  }
+  
+  .p-panelmenu .p-menuitem-link:hover {
+    background-color: #e0e0e0;
+  }
+  

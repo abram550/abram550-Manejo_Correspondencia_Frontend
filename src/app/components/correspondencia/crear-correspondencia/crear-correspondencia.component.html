@@ -1,0 +1,119 @@
+<p-card header="Crear Correspondencia" [style]="{ width: '100%' }">
+    <div>
+        <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="remitenteId" placeholder="Remitente ID" title="Remitente ID">         
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="destinatarioId" placeholder="Destinatario ID" title="Destinatario ID">          
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="empleadoId" placeholder="Empleado ID" title="Empleado ID">         
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="tipoCorrespondenciaId" placeholder="Tipo Correspondencia ID" title="Tipo Correspondencia ID">          
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="estadoCorrespondenciaId" placeholder="Estado Correspondencia ID" title="Estado Correspondencia ID">         
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-home"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="sucursalOrigenId" placeholder="Sucursal Origen ID" title="Sucursal Origen ID">          
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-home"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="sucursalDestinoId" placeholder="Sucursal Destino ID" title="Sucursal Destino ID">         
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-truck"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="transporteId" placeholder="Transporte ID" title="Transporte ID">          
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+                        <input class="w-12" type="date" pInputText formControlName="fechaEnvio" title="Fecha de Envío">         
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+                        <input class="w-12" type="date" pInputText formControlName="fechaEntrega" title="Fecha de Entrega">          
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col-12">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-pencil"></i></span>
+                        <textarea class="w-12" pInputTextarea formControlName="descripcion" placeholder="Descripción" title="Descripción"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-content-center flex-wrap">
+                <button 
+                  pButton 
+                  label="Guardar" 
+                  icon="pi pi-save" 
+                  severity="info" 
+                  class="mr-2 custom-button" 
+                  type="submit" 
+                  [disabled]="form.invalid">
+                </button>
+              
+                <button 
+                  pButton 
+                  label="Cancelar" 
+                  icon="pi pi-times-circle" 
+                  severity="warning" 
+                  class="mr-2 custom-button" 
+                  type="button" 
+                  (click)="cancel()">
+                </button>
+              </div>
+              
+              
+              
+        </form> 
+    </div>
+</p-card>

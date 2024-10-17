@@ -1,0 +1,63 @@
+<p-card class="w-12 h-full">
+    <ng-template pTemplate="header">
+        <div class="flex justify-content-between flex-wrap">
+            <h3 class="ml-4 titulo">Registro de Eventos</h3>
+            <div class="mt-2 mr-2">
+                <a 
+                  pButton 
+                  pRipple
+                  label="Crear Evento" 
+                  icon="pi pi-plus"
+                  class="bg-cyan-600"
+                  [routerLink]="['/eventos-correspondencia/nuevo']">
+                </a>
+            </div>
+        </div>
+    </ng-template>
+
+    <p>
+        <p-table [value]="evento">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Correspondencia</th>
+                    <th>Empleado</th>
+                    <th>Fecha Evento</th>
+                    <th>Descripción</th>
+                    <th class="flex justify-content-center flex-wrap">Acciones</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-evento>
+                <tr>
+                    <td>{{ evento.correspondenciaId }}</td>
+                    <td>{{ evento.empleadoId }}</td>
+                    <td>{{ evento.fechaEvento | date }}</td>
+                    <td>{{ evento.descripcion }}</td>
+                    <td>
+                        <button 
+                            pButton 
+                            pRipple
+                            icon="pi pi-print"
+                            class="bg-cyan-600 mr-1">
+                        </button>
+                        <a 
+                            pButton 
+                            pRipple
+                            icon="pi pi-sync"
+                            severity="warning"
+                            class="mr-1"
+                            [routerLink]="['/eventos-correspondencia/edit', evento.id]">
+                        </a>
+                        <button 
+                            pButton 
+                            pRipple
+                            severity="danger"
+                            icon="pi pi-eraser"
+                            class="mr-1"
+                            (click)="eliminar(evento.id)">
+                        </button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p>
+</p-card>
