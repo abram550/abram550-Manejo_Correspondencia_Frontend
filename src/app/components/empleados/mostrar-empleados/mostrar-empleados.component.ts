@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { EmpleadosService } from '../../../services/empleados/empleados.service';
-import { EmpleadoI } from '../../../models/empleado';
+import { EmpleadosService } from '../../../services/employee/employee.service';
+import { EmpleadoI } from '../../../models/Employee';
 
 @Component({
   selector: 'app-mostrar-empleados',

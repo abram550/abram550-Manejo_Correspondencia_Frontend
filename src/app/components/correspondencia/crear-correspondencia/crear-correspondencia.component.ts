@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CorrespondenciaService } from '../../../services/correspondencia/correspondencia.service';
+import { CorrespondenciaService } from '../../../services/correspondence/correspondence.service';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ToastModule } from 'primeng/toast';

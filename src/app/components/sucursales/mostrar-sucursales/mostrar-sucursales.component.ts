@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { SucursalService } from '../../../services/sucursales/sucursales.service';
-import { SucursalI } from '../../../models/sucursal';
+import { SucursalService } from '../../../services/branches/branches.service';
+import { SucursalI } from '../../../models/Branch';
 import { RouterModule } from '@angular/router'; // Importa RouterModule
 
 @Component({

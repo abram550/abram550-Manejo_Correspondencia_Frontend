@@ -5,8 +5,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import { CorrespondenciaService } from '../../../services/correspondencia/correspondencia.service';
-import { CorrespondenciaI } from '../../../models/correspondencia';
+import { CorrespondenciaService } from '../../../services/correspondence/correspondence.service';
+import { CorrespondenciaI } from '../../../models/Correspondence';
 
 @Component({
   selector: 'app-actualizar-correspondencia',

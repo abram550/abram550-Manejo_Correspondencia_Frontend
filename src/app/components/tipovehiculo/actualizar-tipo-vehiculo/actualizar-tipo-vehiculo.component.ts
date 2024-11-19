@@ -1,12 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TipovehiculoService } from '../../../services/tipovehiculos/tipovehiculo.service';
+import { TipovehiculoService } from '../../../services/vehicle-type/vehicle-type.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
-import { TipoVehiculoI } from '../../../models/transporte';
+import { TipoVehiculoI } from '../../../models/Transport';
 
 @Component({
   selector: 'app-actualizar-tipo-vehiculo',

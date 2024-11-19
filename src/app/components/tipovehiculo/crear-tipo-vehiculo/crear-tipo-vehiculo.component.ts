@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TipovehiculoService } from '../../../services/tipovehiculos/tipovehiculo.service';
+import { TipovehiculoService } from '../../../services/vehicle-type/vehicle-type.service';
 import { Router } from '@angular/router';
-import { TipoVehiculoI } from '../../../models/transporte';
+import { TipoVehiculoI } from '../../../models/Transport';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';

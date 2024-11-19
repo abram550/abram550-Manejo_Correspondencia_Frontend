@@ -1,12 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TipoCorrespondenciaI } from '../../../models/tipocorrespondencia';
+import { TipoCorrespondenciaI } from '../../../models/CorrespondenceType';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import { TipoCorrespondenciaService } from '../../../services/tipo-correspondencia/tipo-correspondencia.service';
+import { TipoCorrespondenciaService } from '../../../services/correspondence-type/correspondence-type.service';
 
 @Component({
   selector: 'app-actualizar-tipo-correspondencia',

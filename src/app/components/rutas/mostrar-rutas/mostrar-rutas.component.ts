@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { RutaService } from '../../../services/rutas/rutas.service';
-import { RutaI } from '../../../models/ruta';
-import { SucursalI } from '../../../models/sucursal';
+import { RutaService } from '../../../services/routes-/routes.service';
+import { RutaI } from '../../../models/Route';
+import { SucursalI } from '../../../models/Branch';
 import { RouterModule } from '@angular/router'; 
 
 @Component({

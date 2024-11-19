@@ -1,0 +1,46 @@
+/* Light-dark mode for the p-card */
+body.light-dark-mode p-card {
+  background-color: #f2f2f2; /* Light gray background */
+  color: #333; /* Dark text */
+}
+
+/* Button styles */
+body.light-dark-mode button {
+  background-color: #333; /* Dark background for buttons */
+  color: #fff; /* White text */
+}
+
+/* Header color */
+body.light-dark-mode h3 {
+  color: #333; /* Dark header */
+}
+
+/* Table cell styles */
+body.light-dark-mode th, body.light-dark-mode td {
+  background-color: #e0e0e0; /* Lighter cell backgrounds */
+  color: #333; /* Dark text */
+}
+
+/* Table styles */
+body.light-dark-mode p-table {
+  border-color: #333; /* Table border color */
+}
+
+/* Center text in the table */
+.text-center {
+  text-align: center; /* Centering text */
+}
+
+/* Spacing for action buttons */
+.flex.justify-content-center {
+  display: flex; /* Using flexbox to center elements */
+  justify-content: center; /* Centering elements */
+}
+
+/* Styled title */
+.title {
+  font-size: 3rem; /* Increased title size */
+  font-weight: bold; /* Bold text */
+  color: #212121; /* Title text color */
+  margin-bottom: 0.10rem; /* Space between title and description */
+}

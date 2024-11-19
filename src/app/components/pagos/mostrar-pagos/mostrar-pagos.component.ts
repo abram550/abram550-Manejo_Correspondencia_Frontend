@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { PagoService } from '../../../services/pagos/pagos.service';
-import { PagoI, TipoPagoI } from '../../../models/pago';
+import { PagoService } from '../../../services/payments/payments.service';
+import { PagoI, TipoPagoI } from '../../../models/Payment';
 import { RouterModule } from '@angular/router'; 
 import { CommonModule } from '@angular/common';
 

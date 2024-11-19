@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 // Importa los componentes generados para las diferentes tablas
-import { MostrarUsuariosComponent } from './components/usuarios/mostrar-usuarios/mostrar-usuarios.component';
+import { ShowUsersComponent } from './components/usuarios/show-users/show-users.component';
 import { CrearUsuariosComponent } from './components/usuarios/crear-usuarios/crear-usuarios.component';
 import { ActualizarUsuariosComponent } from './components/usuarios/actualizar-usuarios/actualizar-usuarios.component';
 import { EliminarUsuariosComponent } from './components/usuarios/eliminar-usuarios/eliminar-usuarios.component';
@@ -84,7 +84,7 @@ export const routes: Routes = [
     // Rutas de Usuarios
     {
         path: "usuarios",
-        component: MostrarUsuariosComponent
+        component: ShowUsersComponent
     },
     {
         path: "usuarios/nuevo",

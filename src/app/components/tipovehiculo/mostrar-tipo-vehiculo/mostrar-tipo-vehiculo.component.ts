@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { TipovehiculoService } from '../../../services/tipovehiculos/tipovehiculo.service';
-import { TipoVehiculoI } from '../../../models/transporte';
+import { TipovehiculoService } from '../../../services/vehicle-type/vehicle-type.service';
+import { TipoVehiculoI } from '../../../models/Transport';
 
 @Component({
   selector: 'app-mostrar-tipo-vehiculo',

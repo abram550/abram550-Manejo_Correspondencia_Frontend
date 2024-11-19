@@ -1,12 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TipousuarioService } from '../../../services/tipousuarios/tipousuario.service';
+import { TipousuarioService } from '../../../services/user-type/user-type.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
-import { TipoUsuarioI } from '../../../models/usuario';
+import { TipoUsuarioI } from '../../../models/User
 
 @Component({
   selector: 'app-actualizar-tipo-usuario',

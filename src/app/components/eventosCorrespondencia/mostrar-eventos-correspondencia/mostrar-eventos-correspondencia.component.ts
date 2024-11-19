@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { EventosCorrespondenciaService } from '../../../services/eventos-correspondencia/eventos-correspondencia.service';
-import { EventosCorrespondenciaI } from '../../../models/eventoscorrespondencia';
+import { EventosCorrespondenciaService } from '../../../services/events-correspondence/events-correspondence.service';
+import { EventosCorrespondenciaI } from '../../../models/CorrespondenceEvents';
 import { RouterModule } from '@angular/router'; 
 import { CommonModule } from '@angular/common';
 

@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { TipousuarioService } from '../../../services/tipousuarios/tipousuario.service';
-import { TipoUsuarioI } from '../../../models/usuario';
+import { TipousuarioService } from '../../../services/user-type/user-type.service';
+import { TipoUsuarioI } from '../../../models/User
 
 @Component({
   selector: 'app-mostrar-tipo-usuario',

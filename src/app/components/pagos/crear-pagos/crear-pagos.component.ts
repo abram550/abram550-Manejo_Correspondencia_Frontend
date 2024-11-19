@@ -1,13 +1,13 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PagoService } from '../../../services/pagos/pagos.service';
+import { PagoService } from '../../../services/payments/payments.service';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { DropdownModule } from 'primeng/dropdown';
-import { PagoI, TipoPagoI } from '../../../models/pago';
+import { PagoI, TipoPagoI } from '../../../models/Payment';
 
 @Component({
   selector: 'app-crear-pagos',

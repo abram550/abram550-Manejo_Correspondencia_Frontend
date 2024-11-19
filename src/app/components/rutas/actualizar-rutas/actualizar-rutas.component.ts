@@ -5,9 +5,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import { RutaService } from '../../../services/rutas/rutas.service';
-import { RutaI } from '../../../models/ruta';
-import { SucursalI } from '../../../models/sucursal';
+import { RutaService } from '../../../services/routes-/routes.service';
+import { RutaI } from '../../../models/Route';
+import { SucursalI } from '../../../models/Branch';
 
 @Component({
   selector: 'app-actualizar-rutas',

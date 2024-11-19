@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TipopagoService } from '../../../services/tipopagos/tipopago.service';
+import { TipopagoService } from '../../../services/payment-type/payment-type.service';
 import { Router } from '@angular/router';
-import { TipoPagoI } from '../../../models/pago';
+import { TipoPagoI } from '../../../models/Payment';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';

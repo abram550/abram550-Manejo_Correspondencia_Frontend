@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { TipopagoService } from '../../../services/tipopagos/tipopago.service';
-import { TipoPagoI } from '../../../models/pago';
+import { TipopagoService } from '../../../services/payment-type/payment-type.service';
+import { TipoPagoI } from '../../../models/Payment';
 
 @Component({
   selector: 'app-mostrar-tipo-pago',

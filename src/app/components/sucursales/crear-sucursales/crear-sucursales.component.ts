@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SucursalService } from '../../../services/sucursales/sucursales.service';
+import { SucursalService } from '../../../services/branches/branches.service';
 import { Router } from '@angular/router';
-import { SucursalI } from '../../../models/sucursal'; // Importar la interfaz de sucursal
+import { SucursalI } from '../../../models/Branch'; // Importar la interfaz de sucursal
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';

@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EventosCorrespondenciaService } from '../../../services/eventos-correspondencia/eventos-correspondencia.service';
+import { EventosCorrespondenciaService } from '../../../services/events-correspondence/events-correspondence.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { EventosCorrespondenciaI } from '../../../models/eventoscorrespondencia';
+import { EventosCorrespondenciaI } from '../../../models/CorrespondenceEvents';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';

@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { TipoCorrespondenciaService } from '../../../services/tipo-correspondencia/tipo-correspondencia.service';
-import { TipoCorrespondenciaI } from '../../../models/tipocorrespondencia';
+import { TipoCorrespondenciaService } from '../../../services/correspondence-type/correspondence-type.service';
+import { TipoCorrespondenciaI } from '../../../models/CorrespondenceType';
 
 @Component({
   selector: 'app-mostrar-tipo-correspondencia',

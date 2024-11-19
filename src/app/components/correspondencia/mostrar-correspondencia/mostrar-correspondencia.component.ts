@@ -3,14 +3,14 @@ import { Router } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { CorrespondenciaService } from '../../../services/correspondencia/correspondencia.service';
-import { CorrespondenciaI } from '../../../models/correspondencia';
-import { UsuarioI } from '../../../models/usuario';
-import { EmpleadoI } from '../../../models/empleado';
-import { TipoCorrespondenciaI } from '../../../models/tipocorrespondencia';
-import { EstadoCorrespondenciaI } from '../../../models/estadocorrespondencia';
-import { SucursalI } from '../../../models/sucursal';
-import { TransporteI } from '../../../models/transporte';
+import { CorrespondenciaService } from '../../../services/correspondence/correspondence.service';
+import { CorrespondenciaI } from '../../../models/Correspondence';
+import { UsuarioI } from '../../../models/User
+import { EmpleadoI } from '../../../models/Employee';
+import { TipoCorrespondenciaI } from '../../../models/CorrespondenceType';
+import { EstadoCorrespondenciaI } from '../../../models/CorrespondenceState';
+import { SucursalI } from '../../../models/Branch';
+import { TransporteI } from '../../../models/Transport';
 import { RouterModule } from '@angular/router'; 
 import { CommonModule } from '@angular/common';
 

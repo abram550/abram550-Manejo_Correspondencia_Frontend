@@ -1,12 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TipopagoService } from '../../../services/tipopagos/tipopago.service';
+import { TipopagoService } from '../../../services/payment-type/payment-type.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
-import { TipoPagoI } from '../../../models/pago';
+import { TipoPagoI } from '../../../models/Payment';
 
 @Component({
   selector: 'app-actualizar-tipo-pago',

@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EmpleadosService } from '../../../services/empleados/empleados.service';
+import { EmpleadosService } from '../../../services/employee/employee.service';
 import { Router } from '@angular/router';
-import { EmpleadoI, TipoEmpleadoI } from '../../../models/empleado'; // Asegúrate de importar ambos modelos
+import { EmpleadoI, TipoEmpleadoI } from '../../../models/Employee'; // Asegúrate de importar ambos modelos
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';

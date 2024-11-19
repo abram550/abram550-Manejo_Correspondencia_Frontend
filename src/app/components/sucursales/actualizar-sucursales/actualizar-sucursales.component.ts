@@ -5,8 +5,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import { SucursalService } from '../../../services/sucursales/sucursales.service';
-import { SucursalI } from '../../../models/sucursal';
+import { SucursalService } from '../../../services/branches/branches.service';
+import { SucursalI } from '../../../models/Branch';
 
 @Component({
   selector: 'app-actualizar-sucursales',

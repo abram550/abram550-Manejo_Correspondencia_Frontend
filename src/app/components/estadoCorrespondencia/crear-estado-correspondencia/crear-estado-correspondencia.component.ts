@@ -5,8 +5,8 @@ import { Router } from '@angular/router';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import { EstadoCorrespondenciaService } from '../../../services/estado-correspondencia/estado-correspondencia.service';
-import { EstadoCorrespondenciaI } from '../../../models/estadocorrespondencia';
+import { EstadoCorrespondenciaService } from '../../../services/correspondence-state/correspondence-state.service';
+import { EstadoCorrespondenciaI } from '../../../models/CorrespondenceState';
 
 @Component({
   selector: 'app-crear-estado-correspondencia',

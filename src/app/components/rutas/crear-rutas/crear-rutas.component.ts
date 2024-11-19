@@ -1,14 +1,14 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RutaService } from '../../../services/rutas/rutas.service';
+import { RutaService } from '../../../services/routes-/routes.service';
 import { Router } from '@angular/router';
-import { RutaI } from '../../../models/ruta'; // Asegúrate de importar ambos modelos
+import { RutaI } from '../../../models/Route'; // Asegúrate de importar ambos modelos
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ToastModule } from 'primeng/toast';
 import { DropdownModule } from 'primeng/dropdown';
-import { SucursalI } from '../../../models/sucursal';
+import { SucursalI } from '../../../models/Branch';
 
 @Component({
   selector: 'app-crear-rutas',

@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { EstadoCorrespondenciaService } from '../../../services/estado-correspondencia/estado-correspondencia.service';
-import { EstadoCorrespondenciaI } from '../../../models/estadocorrespondencia';
+import { EstadoCorrespondenciaService } from '../../../services/correspondence-state/correspondence-state.service';
+import { EstadoCorrespondenciaI } from '../../../models/CorrespondenceState';
 
 @Component({
   selector: 'app-mostrar-estado-correspondencia',

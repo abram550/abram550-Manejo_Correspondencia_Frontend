@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UsuariosService } from '../../../services/usuarios/usuarios.service';
+import { UsuariosService } from '../../../services/users/users.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UsuarioI, TipoUsuarioI } from '../../../models/usuario';
+import { UsuarioI, TipoUsuarioI } from '../../../models/User
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
