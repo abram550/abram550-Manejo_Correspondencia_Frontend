@@ -1,0 +1,59 @@
+<p-card class="w-12 h-full">
+    <ng-template pTemplate="header">
+        <div class="flex justify-content-between flex-wrap">
+            <h3 class="title ml-4">
+                User Type Registration
+            </h3>
+            <div class="mt-2 mr-2">
+                <a 
+                  pButton 
+                  pRipple
+                  label="Create User Type" 
+                  icon="pi pi-plus"
+                  class="bg-cyan-600"
+                  [routerLink]="['/user-type/new']">
+                </a>
+            </div>
+        </div>
+    </ng-template>
+
+    <p>
+        <p-table [value]="userTypes" class="text-center">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Description</th>
+                    <th class="flex justify-content-center flex-wrap">Actions</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-userType>
+                <tr>
+                    <td>{{ userType.description }}</td>
+                    <td class="flex justify-content-center">
+                        <button 
+                            pButton 
+                            pRipple
+                            icon="pi pi-print"
+                            class="bg-cyan-600 mr-1">
+                        </button>
+                        <a 
+                            pButton 
+                            pRipple
+                            icon="pi pi-sync"
+                            severity="warning"
+                            class="mr-1"
+                            [routerLink]="['/user-type/edit', userType.id]">
+                        </a>
+                        <button 
+                            pButton 
+                            pRipple
+                            severity="danger"
+                            icon="pi pi-eraser"
+                            class="mr-1"
+                            (click)="delete(userType.id)">
+                        </button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p>
+</p-card>

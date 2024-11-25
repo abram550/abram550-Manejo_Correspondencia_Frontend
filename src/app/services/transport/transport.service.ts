@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TransportI, VehicleTypeI } from '../../models/Transport';
+import { map } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +14,7 @@ import { TransportI, VehicleTypeI } from '../../models/Transport';
 export class TransportService {
   api_uri_node = 'http://localhost:4000';
   base_path = `${this.api_uri_node}/transports`;
-  vehicle_types_path = `${this.api_uri_node}/vehicle-types`;
+  vehicle_types_path = `${this.api_uri_node}/vehicleTypes`;
 
   constructor(private http: HttpClient) {}
 
@@ -53,6 +57,12 @@ export class TransportService {
    * Retrieves all vehicle types from the server.
    */
   getAllVehicleTypes(): Observable<VehicleTypeI[]> {
-    return this.http.get<VehicleTypeI[]>(this.vehicle_types_path);
+    return this.http.get<{ vehicleTypes: VehicleTypeI[] }>(this.vehicle_types_path).pipe(
+      map((data) => data.vehicleTypes),
+      catchError((error) => {
+        console.error('Error fetching vehicle types:', error);
+        return of([]);
+      })
+    );
   }
 }

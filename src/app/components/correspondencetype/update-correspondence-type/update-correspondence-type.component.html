@@ -1,0 +1,39 @@
+<p-card header="Update Correspondence Type" [style]="{ width: '100%' }">
+    <div>
+        <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+                        <input class="w-12" type="text" pInputText formControlName="type" placeholder="Type" title="Type">         
+                    </div>
+                    <label>Registered Type: {{ type?.value }}</label>
+                </div>
+            </div>
+
+            <div *ngIf="errorMessage" class="p-error">{{ errorMessage }}</div>
+
+            <div class="flex justify-content-center flex-wrap">
+                <button 
+                  pButton 
+                  label="Save" 
+                  icon="pi pi-save" 
+                  severity="info" 
+                  class="mr-2 custom-button" 
+                  type="submit" 
+                  [disabled]="form.invalid">
+                </button>
+              
+                <button 
+                  pButton 
+                  label="Cancel" 
+                  icon="pi pi-times-circle" 
+                  severity="warning" 
+                  class="mr-2 custom-button" 
+                  type="button" 
+                  (click)="cancel()">
+                </button>
+            </div>
+        </form> 
+    </div>
+</p-card>

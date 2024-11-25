@@ -1,0 +1,60 @@
+<p-card class="w-12 h-full">
+    <ng-template pTemplate="header">
+      <div class="flex justify-content-between flex-wrap">
+        <h3 class="title ml-4">User Management</h3>
+        <div class="mt-2 mr-2">
+          <a 
+            pButton 
+            pRipple
+            label="Create User" 
+            icon="pi pi-plus"
+            class="bg-cyan-600"
+            [routerLink]="['/users/new']">
+          </a>
+        </div>
+      </div>
+    </ng-template>
+  
+    <p>
+      <p-table [value]="users" class="text-center">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th class="flex justify-content-center flex-wrap">Actions</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user>
+          <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.status ? 'Active' : 'Inactive' }}</td>
+            <td class="flex justify-content-center">
+              <a 
+                pButton 
+                pRipple
+                icon="pi pi-sync"
+                severity="warning"
+                class="mr-1"
+                [routerLink]="['/users/edit', user.id]">
+              </a>
+              <button 
+                pButton 
+                pRipple
+                severity="danger"
+                icon="pi pi-eraser"
+                class="mr-1"
+                (click)="deleteUser(user.id)">
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p>
+  </p-card>
+  

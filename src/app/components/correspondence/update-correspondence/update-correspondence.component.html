@@ -1,0 +1,196 @@
+<p-card header="Update Correspondence" [style]="{ width: '100%' }">
+    <div>
+        <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3">
+            <div class="grid">
+                <!-- Sender -->
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-user"></i>
+                        </span>
+                        <p-dropdown
+                            [options]="users"
+                            formControlName="senderId"
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Sender"
+                            class="w-full"
+                        ></p-dropdown>
+                    </div>
+                </div>
+
+                <!-- Recipient -->
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-user"></i>
+                        </span>
+                        <p-dropdown
+                            [options]="users"
+                            formControlName="recipientId"
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Recipient"
+                            class="w-full"
+                        ></p-dropdown>
+                    </div>
+                </div>
+
+                <!-- Employee -->
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-user"></i>
+                        </span>
+                        <p-dropdown
+                            [options]="employees"
+                            formControlName="employeeId"
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Employee"
+                            class="w-full"
+                        ></p-dropdown>
+                    </div>
+                </div>
+
+                <!-- State -->
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-tag"></i>
+                        </span>
+                        <p-dropdown
+                            [options]="states"
+                            formControlName="correspondenceStateId"
+                            optionLabel="state"
+                            optionValue="id"
+                            placeholder="Select State"
+                            class="w-full"
+                        ></p-dropdown>
+                    </div>
+                </div>
+
+                <!-- Origin Branch -->
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-building"></i>
+                        </span>
+                        <p-dropdown
+                            [options]="branches"
+                            formControlName="originBranchId"
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Origin Branch"
+                            class="w-full"
+                        ></p-dropdown>
+                    </div>
+                </div>
+
+                <!-- Destination Branch -->
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-building"></i>
+                        </span>
+                        <p-dropdown
+                            [options]="branches"
+                            formControlName="destinationBranchId"
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Destination Branch"
+                            class="w-full"
+                        ></p-dropdown>
+                    </div>
+                </div>
+
+                <!-- Transport -->
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-car"></i>
+                        </span>
+                        <p-dropdown
+                            [options]="transports"
+                            formControlName="transportId"
+                            optionLabel="plate"
+                            optionValue="id"
+                            placeholder="Select Transport"
+                            class="w-full"
+                        ></p-dropdown>
+                    </div>
+                </div>
+
+                <!-- Send Date -->
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-calendar"></i>
+                        </span>
+                        <p-calendar
+                            formControlName="sendDate"
+                            placeholder="Send Date"
+                            [showTime]="true"
+                            class="w-full"
+                        ></p-calendar>
+                    </div>
+                </div>
+
+                <!-- Delivery Date -->
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-calendar"></i>
+                        </span>
+                        <p-calendar
+                            formControlName="deliveryDate"
+                            placeholder="Delivery Date"
+                            [showTime]="true"
+                            class="w-full"
+                        ></p-calendar>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="col-12">
+                    <div class="p-inputgroup mb-3">
+                        <span class="p-inputgroup-addon">
+                            <i class="pi pi-align-left"></i>
+                        </span>
+                        <textarea
+                            pInputTextarea
+                            formControlName="description"
+                            placeholder="Description"
+                            class="w-full"
+                            rows="3"
+                        ></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-content-center flex-wrap">
+                <button 
+                    pButton 
+                    pRipple
+                    label="Save"
+                    icon="pi pi-save"
+                    severity="info"
+                    class="mr-4"
+                    type="submit"
+                    [disabled]="form.invalid"
+                ></button>
+
+                <button 
+                    pButton 
+                    pRipple
+                    label="Cancel"
+                    icon="pi pi-times"
+                    severity="warning"
+                    type="button"
+                    (click)="cancel()"
+                ></button>
+            </div>
+        </form>
+    </div>
+</p-card>

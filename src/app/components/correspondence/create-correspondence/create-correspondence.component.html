@@ -1,0 +1,188 @@
+<p-card header="Create Correspondence" [style]="{ width: '100%' }">
+    <div>
+        <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+            
+            <!-- Sender and Recipient Information -->
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <p-dropdown 
+                            [options]="users" 
+                            formControlName="remitenteId" 
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Sender"
+                            [style]="{'width':'100%'}"
+                            class="w-12">
+                        </p-dropdown>
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <p-dropdown 
+                            [options]="users" 
+                            formControlName="destinatarioId" 
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Recipient"
+                            [style]="{'width':'100%'}"
+                            class="w-12">
+                        </p-dropdown>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Employee and Correspondence Type Information -->
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <p-dropdown 
+                            [options]="employees" 
+                            formControlName="empleadoId" 
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Employee"
+                            [style]="{'width':'100%'}"
+                            class="w-12">
+                        </p-dropdown>
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+                        <p-dropdown 
+                            [options]="correspondenceTypes" 
+                            formControlName="tipoCorrespondenciaId" 
+                            optionLabel="type"
+                            optionValue="id"
+                            placeholder="Select Type"
+                            [style]="{'width':'100%'}"
+                            class="w-12">
+                        </p-dropdown>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Correspondence Status and Branch Information -->
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+                        <p-dropdown 
+                            [options]="correspondenceStates" 
+                            formControlName="estadoCorrespondenciaId" 
+                            optionLabel="state"
+                            optionValue="id"
+                            placeholder="Select Status"
+                            [style]="{'width':'100%'}"
+                            class="w-12">
+                        </p-dropdown>
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-home"></i></span>
+                        <p-dropdown 
+                            [options]="branches" 
+                            formControlName="sucursalOrigenId" 
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Origin Branch"
+                            [style]="{'width':'100%'}"
+                            class="w-12">
+                        </p-dropdown>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination Branch and Transport Information -->
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-home"></i></span>
+                        <p-dropdown 
+                            [options]="branches" 
+                            formControlName="sucursalDestinoId" 
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Select Destination Branch"
+                            [style]="{'width':'100%'}"
+                            class="w-12">
+                        </p-dropdown>
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-truck"></i></span>
+                        <p-dropdown 
+                            [options]="transports" 
+                            formControlName="transporteId" 
+                            optionLabel="plate"
+                            optionValue="id"
+                            placeholder="Select Transport"
+                            [style]="{'width':'100%'}"
+                            class="w-12">
+                        </p-dropdown>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dates -->
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+                        <input class="w-12" type="date" pInputText formControlName="fechaEnvio" title="Shipping Date">         
+                    </div>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+                        <input class="w-12" type="date" pInputText formControlName="fechaEntrega" title="Delivery Date">          
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="grid">
+                <div class="col-12">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-pencil"></i></span>
+                        <textarea class="w-12" pInputTextarea formControlName="descripcion" placeholder="Description"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-content-center flex-wrap">
+                <button 
+                    pButton 
+                    label="Save" 
+                    icon="pi pi-save" 
+                    severity="info" 
+                    class="mr-2" 
+                    type="submit" 
+                    [disabled]="form.invalid">
+                </button>
+                
+                <button 
+                    pButton 
+                    label="Cancel" 
+                    icon="pi pi-times-circle" 
+                    severity="warning" 
+                    class="mr-2" 
+                    type="button" 
+                    (click)="cancel()">
+                </button>
+            </div>
+        </form> 
+    </div>
+</p-card>

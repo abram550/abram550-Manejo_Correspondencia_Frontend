@@ -10,7 +10,7 @@ import { VehicleTypeI } from '../../models/Transport'; // Ensure the path is cor
 })
 export class VehicleTypeService {
   apiUriNode = 'http://localhost:4000';
-  basePath = `${this.apiUriNode}/vehicle-types`; // API path for vehicle types
+  basePath = `${this.apiUriNode}/vehicleTypes`; // API path for vehicle types
 
   constructor(private http: HttpClient) {}
 

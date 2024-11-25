@@ -9,7 +9,7 @@ import { UserTypeI } from '../../models/User';
 })
 export class UserTypeService {
   api_uri_node = 'http://localhost:4000';
-  base_path = `${this.api_uri_node}/user-types`;
+  base_path = `${this.api_uri_node}/userTypes`;
 
   constructor(private http: HttpClient) {}
 

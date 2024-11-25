@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { EmployeeI, EmployeeTypeI } from '../../models/Employee';
+import { map } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -63,7 +65,10 @@ export class EmployeesService {
    * Retrieves all employee types
    * @returns Observable containing an array of EmployeeTypeI objects
    */
+  /** Retrieves all employee types */
   getAllEmployeeTypes(): Observable<EmployeeTypeI[]> {
-    return this.http.get<EmployeeTypeI[]>(this.employeeTypes_path);
+    return this.http.get<{ employeeTypes: EmployeeTypeI[] }>(this.employeeTypes_path).pipe(
+      map((response) => response.employeeTypes) // Extrae el array de employeeTypes
+    );
   }
 }

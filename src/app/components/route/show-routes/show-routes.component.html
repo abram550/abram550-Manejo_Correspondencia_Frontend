@@ -1,0 +1,57 @@
+<p-card class="w-12 h-full">
+  <ng-template pTemplate="header">
+    <div class="flex justify-content-between flex-wrap">
+      <h3 class="title ml-4">Route Records</h3>
+      <div class="mt-2 mr-2">
+        <a 
+          pButton 
+          pRipple
+          label="Create Route" 
+          icon="pi pi-plus"
+          class="bg-cyan-600"
+          [routerLink]="['/routes/new']">
+        </a>
+      </div>
+    </div>
+  </ng-template>
+
+  <p>
+    <p-table [value]="routes" class="text-center">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Origin Branch</th>
+          <th>Destination Branch</th>
+          <th>Distance (Km)</th>
+          <th>Estimated Time (Hours)</th>
+          <th class="flex justify-content-center flex-wrap">Actions</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-route>
+        <tr>
+          <td>{{ getBranchName(route.originBranchId) }}</td>
+          <td>{{ getBranchName(route.destinationBranchId) }}</td>
+          <td>{{ route.distanceKm }}</td>
+          <td>{{ route.estimatedTimeHours }}</td>
+          <td class="flex justify-content-center">
+            <a 
+              pButton 
+              pRipple
+              icon="pi pi-sync"
+              severity="warning"
+              class="mr-1"
+              [routerLink]="['/routes/edit', route.originBranchId]">
+            </a>
+            <button 
+              pButton 
+              pRipple
+              severity="danger"
+              icon="pi pi-eraser"
+              class="mr-1"
+              (click)="deleteRoute(route.originBranchId)">
+            </button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p>
+</p-card>

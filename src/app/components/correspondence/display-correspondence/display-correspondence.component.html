@@ -1,0 +1,75 @@
+<p-card class="w-12 h-full">
+  <ng-template pTemplate="header">
+    <div class="flex justify-content-between flex-wrap">
+      <h3 class="ml-4 title">Correspondence Register</h3>
+      <div class="mt-2 mr-2">
+        <a 
+          pButton 
+          pRipple
+          label="Create Correspondence" 
+          icon="pi pi-plus"
+          class="bg-cyan-600"
+          [routerLink]="['/correspondence/new']">
+        </a>
+      </div>
+    </div>
+  </ng-template>
+  <p>
+    <p-table [value]="correspondence" class="text-center">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Sender</th>
+          <th>Recipient</th>
+          <th>Employee</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Origin</th>
+          <th>Destination</th>
+          <th>Transport</th>
+          <th>Shipping Date</th>
+          <th>Delivery Date</th>
+          <th>Description</th>
+          <th class="flex justify-content-center flex-wrap">Actions</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-item>
+        <tr>
+          <td class="text-center small-text">{{ getSenderName(item.senderId) }}</td>
+          <td class="text-center small-text">{{ getRecipientName(item.recipientId) }}</td>
+          <td class="text-center small-text">{{ getEmployeeName(item.employeeId) }}</td>
+          <td class="text-center small-text">{{ getCorrespondenceTypeName(item.correspondenceTypeId) }}</td>
+          <td class="text-center small-text">{{ getCorrespondenceStateName(item.correspondenceStateId) }}</td>
+          <td class="text-center small-text">{{ getOriginBranchName(item.originBranchId) }}</td>
+          <td class="text-center small-text">{{ getDestinationBranchName(item.destinationBranchId) }}</td>
+          <td class="text-center small-text">{{ getTransportName(item.transportId) }}</td>
+          <td class="text-center small-text">{{ item.sendDate | date }}</td>
+          <td class="text-center small-text">{{ item.deliveryDate | date }}</td>
+          <td class="text-center small-text">{{ item.description }}</td>
+          <td class="flex justify-content-center">
+            <button 
+              pButton 
+              icon="pi pi-print"
+              class="bg-cyan-600 mr-1">
+            </button>
+            <a 
+              pButton 
+              pRipple
+              icon="pi pi-sync"
+              severity="warning"
+              class="mr-1"
+              [routerLink]="['/correspondence/edit', item.id]">
+            </a>
+            <button 
+              pButton 
+              pRipple
+              severity="danger"
+              icon="pi pi-eraser"
+              class="mr-1"
+              (click)="delete(item.id)">
+            </button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p>
+</p-card>

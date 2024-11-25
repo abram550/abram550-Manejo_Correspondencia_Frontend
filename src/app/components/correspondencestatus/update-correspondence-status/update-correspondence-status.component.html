@@ -1,0 +1,71 @@
+<p-card header="Update Correspondence State" [style]="{ width: '100%' }">
+    <div>
+      <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+        <div class="grid">
+          <!-- Campo para mostrar el estado actual -->
+          <div class="col-12 sm:col-6">
+            <div class="p-inputgroup mb-3">
+              <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>
+              <input
+                class="w-12"
+                type="text"
+                pInputText
+                formControlName="state"
+                placeholder="Current State"
+                title="Current State"
+                [disabled]="true"
+              />
+            </div>
+          </div>
+  
+          <!-- Campo para seleccionar el estado activo/inactivo -->
+          <div class="col-12 sm:col-6">
+            <div class="p-inputgroup mb-3">
+              <span class="p-inputgroup-addon"><i class="pi pi-toggle-on"></i></span>
+              <p-dropdown
+                [options]="[
+                  { label: 'Active', value: true },
+                  { label: 'Inactive', value: false }
+                ]"
+                formControlName="status"
+                placeholder="Select Status"
+                class="w-12"
+              >
+              </p-dropdown>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Mensaje de error -->
+        <div *ngIf="errorMessage" class="p-error mb-3 text-center">
+          {{ errorMessage }}
+        </div>
+  
+        <!-- Botones de acción -->
+        <div class="flex justify-content-center flex-wrap">
+          <button
+            pButton
+            label="Save"
+            icon="pi pi-save"
+            severity="info"
+            class="mr-2 custom-button"
+            type="submit"
+            [disabled]="form.invalid"
+          >
+          </button>
+  
+          <button
+            pButton
+            label="Cancel"
+            icon="pi pi-times-circle"
+            severity="warning"
+            class="mr-2 custom-button"
+            type="button"
+            (click)="cancel()"
+          >
+          </button>
+        </div>
+      </form>
+    </div>
+  </p-card>
+  

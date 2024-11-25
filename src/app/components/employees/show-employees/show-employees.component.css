@@ -1,0 +1,60 @@
+/* General component style */
+:host {
+    display: block;
+    padding: 1rem;
+    background-color: #f9f9f9; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Title style */
+.titulo {
+    font-size: 3rem; /* Increased title size */
+    font-weight: bold; /* Bold text */
+    color: #212121; /* Text color */
+    margin-bottom: 0.10rem; /* Space between title and description */
+}
+
+/* Card header style */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007ad9; /* Header background color */
+    color: #fff; /* Text color */
+    padding: 1rem;
+    border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+}
+
+/* Button style */
+.card-button {
+    background-color: #28a745; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Button rounded corners */
+    padding: 0.5rem 1rem; /* Padding */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.card-button:hover {
+    background-color: #218838; /* Button hover background color */
+}
+
+/* Table style */
+.p-table {
+    margin-top: 1rem; /* Top margin */
+}
+
+.p-table th {
+    background-color: #007ad9; /* Table header background color */
+    color: #fff; /* Table header text color */
+}
+
+.p-table td {
+    padding: 0.75rem; /* Cell padding */
+}
+
+.p-table td button {
+    margin-right: 0.5rem; /* Margin to the right of buttons */
+}

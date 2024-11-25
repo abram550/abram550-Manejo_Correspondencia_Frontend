@@ -9,7 +9,7 @@ import { CorrespondenceTypeI } from '../../models/CorrespondenceType';
 })
 export class CorrespondenceTypeService {
   api_uri_node = 'http://localhost:4000';
-  base_path = `${this.api_uri_node}/correspondence-type`;
+  base_path = `${this.api_uri_node}/correspondence-types`;
 
   constructor(private http: HttpClient) {}
 

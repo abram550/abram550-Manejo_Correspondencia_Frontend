@@ -1,0 +1,69 @@
+<p-card header="Update Employees" [style]="{ width: '100%' }">
+    <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+        <div class="grid">
+            <div class="col-12 sm:col-6">
+                <div class="p-inputgroup mb-3">
+                    <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                    <input class="w-full" type="text" pInputText formControlName="name" placeholder="Name" title="Name">         
+                </div>
+            </div>
+  
+            <div class="col-12 sm:col-6">
+                <div class="p-inputgroup mb-3">
+                    <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+                    <input class="w-full" type="email" pInputText formControlName="email" placeholder="Email" title="Email">         
+                </div>
+            </div>
+        </div>
+  
+        <div class="grid">
+            <div class="col-12 sm:col-6">
+                <div class="p-inputgroup mb-3">
+                    <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
+                    <input class="w-full" type="text" pInputText formControlName="phone" placeholder="Phone" title="Phone">          
+                </div>
+            </div>
+  
+            <div class="col-12 sm:col-6">
+                <div class="p-inputgroup mb-3">
+                    <span class="p-inputgroup-addon"><i class="pi pi-users"></i></span>
+                    <p-dropdown 
+                    formControlName="employeeTypeId" 
+                    [options]="employeeTypes" 
+                    optionLabel="label" 
+                    optionValue="value" 
+                    [placeholder]="'Select a Type'" 
+                    [showClear]="true" 
+                    [filter]="true"
+                    [style]="{ 'width': '100%' }">
+                </p-dropdown>
+                
+                </div>
+            </div>
+        </div>
+  
+        <div class="flex justify-content-center flex-wrap mt-4">
+            <button 
+                pButton 
+                pRipple
+                label="Update"
+                icon="pi pi-refresh"
+                severity="info"
+                class="mr-4"
+                type="submit"
+                [disabled]="form.invalid" 
+            ></button>
+  
+            <button 
+                pButton 
+                pRipple
+                label="Cancel"
+                icon="pi pi-times-circle"
+                severity="warning"
+                class="mr-4"
+                type="button"
+                (click)="cancel()"
+            ></button>
+        </div>
+    </form> 
+</p-card>

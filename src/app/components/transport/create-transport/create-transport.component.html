@@ -1,0 +1,77 @@
+<p-card header="Create Transport" [style]="{ width: '100%' }">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+    <!-- License Plate -->
+    <div class="grid">
+      <div class="col-12 sm:col-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-car"></i></span>
+          <input 
+            type="text" 
+            pInputText 
+            formControlName="licensePlate" 
+            placeholder="License Plate" 
+          />
+        </div>
+        <small class="text-red-500" *ngIf="licensePlate?.errors?.['required'] && licensePlate?.touched">
+          License Plate is required
+        </small>
+      </div>
+    </div>
+
+    <!-- Capacity -->
+    <div class="grid">
+      <div class="col-12 sm:col-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-weight"></i></span>
+          <input 
+            type="number" 
+            pInputText 
+            formControlName="capacityKg" 
+            placeholder="Capacity (kg)" 
+          />
+        </div>
+        <small class="text-red-500" *ngIf="capacityKg?.errors?.['required'] && capacityKg?.touched">
+          Capacity is required
+        </small>
+        <small class="text-red-500" *ngIf="capacityKg?.errors?.['min'] && capacityKg?.touched">
+          Capacity must be a positive number
+        </small>
+      </div>
+    </div>
+
+    <!-- Vehicle Type -->
+    <div class="grid">
+      <div class="col-12 sm:col-6">
+        <p-dropdown 
+          [options]="vehicleTypes" 
+          formControlName="vehicleTypeId" 
+          placeholder="Select vehicle type" 
+          [style]="{ width: '100%' }"
+        ></p-dropdown>
+        <small class="text-red-500" *ngIf="vehicleTypeId?.errors?.['required'] && vehicleTypeId?.touched">
+          Vehicle Type is required
+        </small>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex justify-content-center flex-wrap mt-3">
+      <button 
+        pButton 
+        label="Save" 
+        icon="pi pi-save" 
+        severity="info" 
+        type="submit" 
+        [disabled]="form.invalid"
+      ></button>
+      <button 
+        pButton 
+        label="Cancel" 
+        icon="pi pi-times-circle" 
+        severity="warning" 
+        type="button" 
+        (click)="cancel()"
+      ></button>
+    </div>
+  </form>
+</p-card>

@@ -5,12 +5,14 @@ export interface UserTypeI {
 }
 
 export interface UserI {
-  id: number;
+  id?: number;
   name: string;
   address: string;
   email: string;
   phone: string;
-  usertypeId: number;
-  status: boolean;
-  usertype : UserTypeI;
+  status: boolean; // New status field for soft deletion
+  password: string;
+  avatar?: string;
+
 }
+

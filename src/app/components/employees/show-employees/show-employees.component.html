@@ -1,0 +1,65 @@
+<p-card class="w-12 h-full">
+    <ng-template pTemplate="header">
+        <div class="flex justify-content-between flex-wrap">
+            <h3 class="titulo ml-4">
+                Employee Registration
+            </h3>
+            <div class="mt-2 mr-2">
+                <a 
+                  pButton 
+                  pRipple
+                  label="Create Employee" 
+                  icon="pi pi-plus"
+                  class="bg-cyan-600"
+                  [routerLink]="['/employees/new']">
+                </a>
+            </div>
+        </div>
+    </ng-template>
+
+    <p>
+        <p-table [value]="employees" class="text-center">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Position</th> <!-- Add a column to show the position -->
+                    <th class="flex justify-content-center flex-wrap">Actions</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-employee>
+                <tr>
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.email }}</td>
+                    <td>{{ employee.phone }}</td>
+                    <td>{{ employee.employeeType?.jobTitle }}</td> <!-- Access the jobTitle from employeeType -->
+                    <td class="flex justify-content-center">
+                        <button 
+                            pButton 
+                            pRipple
+                            icon="pi pi-print"
+                            class="bg-cyan-600 mr-1">
+                        </button>
+                        <a 
+                            pButton 
+                            pRipple
+                            icon="pi pi-sync"
+                            severity="warning"
+                            class="mr-1"
+                            [routerLink]="['/employees/edit', employee.id]">
+                        </a>
+                        <button 
+                            pButton 
+                            pRipple
+                            severity="danger"
+                            icon="pi pi-eraser"
+                            class="mr-1"
+                            (click)="delete(employee.id)">
+                        </button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p>
+</p-card>

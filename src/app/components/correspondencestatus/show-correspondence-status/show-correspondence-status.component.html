@@ -1,0 +1,60 @@
+<p-card class="w-12 h-full">
+    <ng-template pTemplate="header">
+      <div class="flex justify-content-between flex-wrap">
+        <h3 class="title ml-4"> <!-- Class 'title' for styling -->
+          Correspondence Status Registry
+        </h3>
+        <div class="mt-2 mr-2">
+          <a 
+            pButton 
+            pRipple
+            label="Create Correspondence Status" 
+            icon="pi pi-plus"
+            class="bg-cyan-600"
+            [routerLink]="['/correspondence-status/new']">
+          </a>
+        </div>
+      </div>
+    </ng-template>
+  
+    <p>
+      <p-table [value]="states">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Status</th>
+            <th class="flex justify-content-center flex-wrap">Actions</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-state>
+          <tr>
+            <td>{{ state.state }}</td>
+            <td class="flex justify-content-center"> <!-- Centered alignment -->
+              <button 
+                pButton 
+                pRipple
+                icon="pi pi-print"
+                class="bg-cyan-600 mr-1">
+              </button>
+              <a 
+                pButton 
+                pRipple
+                icon="pi pi-sync"
+                severity="warning"
+                class="mr-1"
+                [routerLink]="['/correspondence-status/edit/', state.id]">
+              </a>
+              <button 
+                pButton 
+                pRipple
+                severity="danger"
+                icon="pi pi-eraser"
+                class="mr-1"
+                (click)="delete(state.id)">
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p>
+  </p-card>
+  

@@ -1,0 +1,71 @@
+<p-card header="Create Employees" [style]="{ width: '100%' }">
+  <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+
+    <!-- Name -->
+    <div class="grid">
+      <div class="col-12 sm:col-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+          <input class="w-12" type="text" pInputText formControlName="name" placeholder="Name">
+        </div>
+        <small class="text-red-500" *ngIf="name?.errors?.['required'] && name?.touched">
+          Name is required
+        </small>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="grid">
+      <div class="col-12 sm:col-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+          <input class="w-12" type="email" pInputText formControlName="email" placeholder="Email">
+        </div>
+        <small class="text-red-500" *ngIf="email?.errors?.['required'] && email?.touched">
+          Email is required
+        </small>
+        <small class="text-red-500" *ngIf="email?.errors?.['email'] && email?.touched">
+          Please enter a valid email
+        </small>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="grid">
+      <div class="col-12 sm:col-6">
+        <div class="p-inputgroup mb-1">
+          <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
+          <input class="w-12" type="text" pInputText formControlName="phone" placeholder="Phone">
+        </div>
+        <small class="text-red-500" *ngIf="phone?.errors?.['required'] && phone?.touched">
+          Phone is required
+        </small>
+      </div>
+    </div>
+
+    <!-- Employee Type -->
+    <div class="grid">
+      <div class="col-12 sm:col-6">
+        <div class="mb-3">
+          <label for="employeeType" class="block mb-2">Employee Type</label>
+          <p-dropdown
+            id="employeeType"
+            [options]="employeeTypes"
+            formControlName="employeeTypeId"
+            placeholder="Select employee type"
+            [style]="{ 'width': '100%' }"
+          ></p-dropdown>
+          <small class="text-red-500" *ngIf="employeeTypeId?.errors?.['required'] && employeeTypeId?.touched">
+            Employee type is required
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex justify-content-center flex-wrap">
+      <button pButton label="Save" icon="pi pi-save" severity="info" type="submit" [disabled]="form.invalid"></button>
+      <button pButton label="Cancel" icon="pi pi-times-circle" severity="warning" type="button" (click)="cancel()"></button>
+    </div>
+  </form>
+</p-card>

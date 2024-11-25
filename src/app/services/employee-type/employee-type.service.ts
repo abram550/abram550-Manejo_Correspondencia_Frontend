@@ -13,7 +13,7 @@ export class EmployeeTypeService {
 
   constructor(private http: HttpClient) {}
 
-  /**
+  /**http://localhost:4000/employee-types
    * Retrieves all employee types from the server.
    */
   getAllTypes(): Observable<{ employeeTypes: EmployeeTypeI[] }> {

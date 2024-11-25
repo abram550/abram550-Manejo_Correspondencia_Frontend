@@ -1,0 +1,72 @@
+<p-card header="Update Payment" [style]="{ width: '100%' }">
+    <div>
+        <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-id-card"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="correspondenceId" placeholder="Correspondence ID" title="Correspondence ID">         
+                    </div>
+                    <label>Registered Correspondence ID: {{ correspondenceId?.value }}</label>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-money-bill"></i></span>
+                        <input class="w-12" type="number" pInputText formControlName="amount" placeholder="Amount" title="Amount">          
+                    </div>
+                    <label>Registered Amount: {{ amount?.value }}</label>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-credit-card"></i></span>
+                        <p-dropdown 
+                            [options]="paymentMethods" 
+                            formControlName="paymentMethod" 
+                            placeholder="Select Payment Method" 
+                            appendTo="body"
+                            styleClass="w-12"
+                            [showClear]="true"
+                            [autoZIndex]="true"
+                            [baseZIndex]="1000">
+                        </p-dropdown>
+                    </div>
+                    <label>Selected Payment Method: {{ paymentMethod?.value }}</label>
+                </div>
+
+                <div class="col-12 sm:col-6">
+                    <div class="p-inputgroup mb-1">
+                        <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+                        <input class="w-12" type="date" pInputText formControlName="paymentDate" title="Payment Date">         
+                    </div>
+                    <label>Registered Payment Date: {{ paymentDate?.value | date:'yyyy-MM-dd' }}</label>
+                </div>
+            </div>
+
+            <div class="flex justify-content-center flex-wrap">
+                <button 
+                  pButton 
+                  label="Save" 
+                  icon="pi pi-save" 
+                  severity="info" 
+                  class="mr-2 custom-button" 
+                  type="submit" 
+                  [disabled]="form.invalid">
+                </button>
+              
+                <button 
+                  pButton 
+                  label="Cancel" 
+                  icon="pi pi-times-circle" 
+                  severity="warning" 
+                  class="mr-2 custom-button" 
+                  type="button" 
+                  (click)="cancel()">
+                </button>
+            </div>
+        </form> 
+    </div>
+</p-card>

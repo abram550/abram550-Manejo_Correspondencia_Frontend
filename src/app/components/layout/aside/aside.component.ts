@@ -17,72 +17,72 @@ export class AsideComponent {
       {
         label: 'Usuarios',
         icon: 'pi pi-fw pi-users',
-        routerLink: '/usuarios'
+        routerLink: '/users'
       },
       {
         label: 'Empleados',
         icon: 'pi pi-fw pi-qrcode',
-        routerLink: '/empleados'
+        routerLink: '/employees'
       },
       {
         label: 'Tipo Correspondencia',
         icon: 'pi pi-fw pi-shopping-bag',
-        routerLink: '/tipo-correspondencia'
+        routerLink: '/correspondence-type'
       },
       {
         label: 'Estado Correspondencia',
         icon: 'pi pi-fw pi-shopping-cart',
-        routerLink: '/estado-correspondencia'
+        routerLink: '/correspondence-status'
       },
       {
         label: 'Sucursales',
         icon: 'pi pi-fw pi-map',
-        routerLink: '/sucursales'
+        routerLink: '/branches'
       },
       {
         label: 'Transporte',
         icon: 'pi pi-fw pi-car',
-        routerLink: '/transporte'
+        routerLink: '/transport'
       },
       {
         label: 'Rutas',
         icon: 'pi pi-fw pi-road',
-        routerLink: '/rutas'
+        routerLink: '/routes'
       },
       {
         label: 'Correspondencia',
         icon: 'pi pi-fw pi-envelope',
-        routerLink: '/correspondencia'
+        routerLink: '/correspondence'
       },
       {
-        label: 'Pagos',
+        label: 'payments',
         icon: 'pi pi-fw pi-money-bill',
-        routerLink: '/pagos'
+        routerLink: '/payments'
       },
       {
         label: 'Eventos Correspondencia',
         icon: 'pi pi-fw pi-calendar',
-        routerLink: '/eventos-correspondencia'
+        routerLink: '/correspondence-events'
       },
       {
         label: 'Tipo Usuario',
         icon: 'pi pi-fw pi-user',
-        routerLink: '/tipo-usuario'
+        routerLink: '/user-type'
       },
       {
         label: 'Tipo Pago',
         icon: 'pi pi-fw pi-dollar',
-        routerLink: '/tipo-pago'
+        routerLink: '/payment-type'
       },
       {
         label: 'Tipo Empleado',
         icon: 'pi pi-fw pi-briefcase',
-        routerLink: '/tipo-empleado'
+        routerLink: '/employee-type'
       },
       {
         label: 'Tipo Vehículo',
         icon: 'pi pi-fw pi-car',
-        routerLink: '/tipo-vehiculo'
+        routerLink: '/vehicle-type'
       }
     ];
   }

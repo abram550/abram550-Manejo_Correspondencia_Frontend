@@ -1,322 +1,257 @@
 import { Routes } from '@angular/router';
 
-// Importa los componentes generados para las diferentes tablas
-import { ShowUsersComponent } from './components/usuarios/show-users/show-users.component';
-import { CrearUsuariosComponent } from './components/usuarios/crear-usuarios/crear-usuarios.component';
-import { ActualizarUsuariosComponent } from './components/usuarios/actualizar-usuarios/actualizar-usuarios.component';
-import { EliminarUsuariosComponent } from './components/usuarios/eliminar-usuarios/eliminar-usuarios.component';
+// Importing components generated for different tables
+import { ShowUsersComponent } from './components/users1/show-users/show-users.component';
+import { CreateUsersComponent } from './components/users1/create-users/create-users.component';
+import { UpdateUsersComponent } from './components/users1/update-users/update-users.component';
 
-import { MostrarEmpleadosComponent } from './components/empleados/mostrar-empleados/mostrar-empleados.component';
-import { CrearEmpleadosComponent } from './components/empleados/crear-empleados/crear-empleados.component';
-import { ActualizarEmpleadosComponent } from './components/empleados/actualizar-empleados/actualizar-empleados.component';
-import { EliminarEmpleadosComponent } from './components/empleados/eliminar-empleados/eliminar-empleados.component';
+import { ShowEmployeesComponent } from './components/employees/show-employees/show-employees.component';
+import { CreateEmployeesComponent } from './components/employees/create-employee/create-employees.component';
+import { UpdateEmployeesComponent } from './components/employees/update-employees/update-employees.component';
 
-import { MostrarTipoCorrespondenciaComponent } from './components/tipoCorrespondencia/mostrar-tipo-correspondencia/mostrar-tipo-correspondencia.component';
-import { CrearTipoCorrespondenciaComponent } from './components/tipoCorrespondencia/crear-tipo-correspondencia/crear-tipo-correspondencia.component';
-import { ActualizarTipoCorrespondenciaComponent } from './components/tipoCorrespondencia/actualizar-tipo-correspondencia/actualizar-tipo-correspondencia.component';
-import { EliminarTipoCorrespondenciaComponent } from './components/tipoCorrespondencia/eliminar-tipo-correspondencia/eliminar-tipo-correspondencia.component';
+import { ShowCorrespondenceTypeComponent } from './components/correspondencetype/show-correspondence-type/show-correspondence-type.component';
+import { CreateCorrespondenceTypeComponent } from './components/correspondencetype/create-correspondence-type/create-correspondence-type.component';
+import { UpdateCorrespondenceTypeComponent } from './components/correspondencetype/update-correspondence-type/update-correspondence-type.component';
 
-import { MostrarEstadoCorrespondenciaComponent } from './components/estadoCorrespondencia/mostrar-estado-correspondencia/mostrar-estado-correspondencia.component';
-import { CrearEstadoCorrespondenciaComponent } from './components/estadoCorrespondencia/crear-estado-correspondencia/crear-estado-correspondencia.component';
-import { ActualizarEstadoCorrespondenciaComponent } from './components/estadoCorrespondencia/actualizar-estado-correspondencia/actualizar-estado-correspondencia.component';
-import { EliminarEstadoCorrespondenciaComponent } from './components/estadoCorrespondencia/eliminar-estado-correspondencia/eliminar-estado-correspondencia.component';
+import { ShowCorrespondenceStatusComponent } from './components/correspondencestatus/show-correspondence-status/show-correspondence-status.component';
+import { CreateCorrespondenceStatusComponent } from './components/correspondencestatus/create-correspondence-status/create-correspondence-status.component';
+import { UpdateCorrespondenceStateComponent } from './components/correspondencestatus/update-correspondence-status/update-correspondence-status.component';
 
-import { MostrarSucursalesComponent } from './components/sucursales/mostrar-sucursales/mostrar-sucursales.component';
-import { CrearSucursalesComponent } from './components/sucursales/crear-sucursales/crear-sucursales.component';
-import { ActualizarSucursalesComponent } from './components/sucursales/actualizar-sucursales/actualizar-sucursales.component';
-import { EliminarSucursalesComponent } from './components/sucursales/eliminar-sucursales/eliminar-sucursales.component';
+import { ShowBranchesComponent } from './components/branches/show-branches/show-branches.component';
+import { CreateBranchesComponent } from './components/branches/create-branches/create-branches.component';
+import { UpdateBranchesComponent } from './components/branches/update-branches/update-branches.component';
 
-import { MostrarTransporteComponent } from './components/transporte/mostrar-transporte/mostrar-transporte.component';
-import { CrearTransporteComponent } from './components/transporte/crear-transporte/crear-transporte.component';
-import { ActualizarTransporteComponent } from './components/transporte/actualizar-transporte/actualizar-transporte.component';
-import { EliminarTransporteComponent } from './components/transporte/eliminar-transporte/eliminar-transporte.component';
+import { ShowTransportComponent } from './components/transport/show-transport/show-transport.component';
+import { CreateTransportComponent } from './components/transport/create-transport/create-transport.component';
+import { UpdateTransportComponent } from './components/transport/update-transport/update-transport.component';
 
-import { MostrarRutasComponent } from './components/rutas/mostrar-rutas/mostrar-rutas.component';
-import { CrearRutasComponent } from './components/rutas/crear-rutas/crear-rutas.component';
-import { ActualizarRutasComponent } from './components/rutas/actualizar-rutas/actualizar-rutas.component';
-import { EliminarRutasComponent } from './components/rutas/eliminar-rutas/eliminar-rutas.component';
 
-import { MostrarCorrespondenciaComponent } from './components/correspondencia/mostrar-correspondencia/mostrar-correspondencia.component';
-import { CrearCorrespondenciaComponent } from './components/correspondencia/crear-correspondencia/crear-correspondencia.component';
-import { ActualizarCorrespondenciaComponent } from './components/correspondencia/actualizar-correspondencia/actualizar-correspondencia.component';
-import { EliminarCorrespondenciaComponent } from './components/correspondencia/eliminar-correspondencia/eliminar-correspondencia.component';
+import { ShowRoutesComponent } from './components/route/show-routes/show-routes.component';
+import { CreateRoutesComponent } from './components/route/create-routes/create-routes.component';
+import { UpdateRoutesComponent } from './components/route/update-routes/update-routes.component';
 
-import { MostrarPagosComponent } from './components/pagos/mostrar-pagos/mostrar-pagos.component';
-import { CrearPagosComponent } from './components/pagos/crear-pagos/crear-pagos.component';
-import { ActualizarPagosComponent } from './components/pagos/actualizar-pagos/actualizar-pagos.component';
-import { EliminarPagosComponent } from './components/pagos/eliminar-pagos/eliminar-pagos.component';
+import { DisplayCorrespondenceComponent } from './components/correspondence/display-correspondence/display-correspondence.component';
+import { CreateCorrespondenceComponent } from './components/correspondence/create-correspondence/create-correspondence.component';
+import { UpdateCorrespondenceComponent } from './components/correspondence/update-correspondence/update-correspondence.component';
 
-import { MostrarEventosCorrespondenciaComponent } from './components/eventosCorrespondencia/mostrar-eventos-correspondencia/mostrar-eventos-correspondencia.component';
-import { CrearEventosCorrespondenciaComponent } from './components/eventosCorrespondencia/crear-eventos-correspondencia/crear-eventos-correspondencia.component';
-import { ActualizarEventosCorrespondenciaComponent } from './components/eventosCorrespondencia/actualizar-eventos-correspondencia/actualizar-eventos-correspondencia.component';
-import { EliminarEventosCorrespondenciaComponent } from './components/eventosCorrespondencia/eliminar-eventos-correspondencia/eliminar-eventos-correspondencia.component';
+import { ShowPaymentsComponent } from './components/payment__/show-payment_/show-payment.component';
+import { CreatePaymentsComponent } from './components/payment__/create-payment/create-payment.component';
+import { UpdatePaymentComponent } from './components/payment__/update-payment/update-payment.component';
 
-// Rutas para Tipo Usuario
-import { MostrarTipoUsuarioComponent } from './components/tipousuario/mostrar-tipo-usuario/mostrar-tipo-usuario.component';
-import { CrearTipoUsuarioComponent } from './components/tipousuario/crear-tipo-usuario/crear-tipo-usuario.component';
-import { ActualizarTipoUsuarioComponent } from './components/tipousuario/actualizar-tipo-usuario/actualizar-tipo-usuario.component';
-import { EliminarTipoUsuarioComponent } from './components/tipousuario/eliminar-tipo-usuario/eliminar-tipo-usuario.component';
+import { ShowCorrespondenceEventComponent } from './components/correspondenceevents/show-correspondence-event/show-correspondence-event.componen';
+import { CreateCorrespondenceEventComponent } from './components/correspondenceevents/create-correspondence-event/create-correspondence-event.component';
+import { UpdateCorrespondenceEventsComponent } from './components/correspondenceevents/update-correspondence-events/update-correspondence-events.component';
 
-// Rutas para Tipo Pago
-import { MostrarTipoPagoComponent } from './components/tipopago/mostrar-tipo-pago/mostrar-tipo-pago.component';
-import { CrearTipoPagoComponent } from './components/tipopago/crear-tipo-pago/crear-tipo-pago.component';
-import { ActualizarTipoPagoComponent } from './components/tipopago/actualizar-tipo-pago/actualizar-tipo-pago.component';
-import { EliminarTipoPagoComponent } from './components/tipopago/eliminar-tipo-pago/eliminar-tipo-pago.component';
+// Routes for User Type
+import { DisplayUserTypeComponent } from './components/usertype/display-user-type/display-user-type.component';
+import { CreateUserTypeComponent } from './components/usertype/crear-tipo-usuario/create-user-type.component';
+import { UpdateUserTypeComponent } from './components/usertype/update-user-type/update-user-type.component';
 
-// Rutas para Tipo Empleado
-import { MostrarTipoEmpleadoComponent } from './components/tipoempleado/mostrar-tipo-empleado/mostrar-tipo-empleado.component';
-import { CrearTipoEmpleadoComponent } from './components/tipoempleado/crear-tipo-empleado/crear-tipo-empleado.component';
-import { ActualizarTipoEmpleadoComponent } from './components/tipoempleado/actualizar-tipo-empleado/actualizar-tipo-empleado.component';
-import { EliminarTipoEmpleadoComponent } from './components/tipoempleado/eliminar-tipo-empleado/eliminar-tipo-empleado.component';
 
-// Rutas para Tipo Vehiculo
-import { MostrarTipoVehiculoComponent } from './components/tipovehiculo/mostrar-tipo-vehiculo/mostrar-tipo-vehiculo.component';
-import { CrearTipoVehiculoComponent } from './components/tipovehiculo/crear-tipo-vehiculo/crear-tipo-vehiculo.component';
-import { ActualizarTipoVehiculoComponent } from './components/tipovehiculo/actualizar-tipo-vehiculo/actualizar-tipo-vehiculo.component';
-import { EliminarTipoVehiculoComponent } from './components/tipovehiculo/eliminar-tipo-vehiculo/eliminar-tipo-vehiculo.component';
+// Routes for Payment Type
+import { ShowPaymentTypeComponent } from './components/paymenttype/show-payment-type/show-payment-type.component';
+import { CreatePaymentTypeComponent } from './components/paymenttype/create-payment-type/create-payment-type.component';
+import { UpdatePaymentTypeComponent } from './components/paymenttype/update-payment-type/update-payment-type.component';
 
+// Routes for Employee Type
+import { ShowEmployeeTypeComponent } from './components/employeetype_/show-employee-type/show-employee-type.component';
+import { CreateEmployeeTypeComponent } from './components/employeetype_/create-employee-type/create-employee-type.component';
+import { UpdateEmployeeTypeComponent } from './components/employeetype_/update-employee-type/update-employee-type.component';
+
+
+// Routes for Vehicle Type
+import { DisplayVehicleTypeComponent } from './components/vehicletype/display-vehicle-type/display-vehicle-type.component';
+import { CreateVehicleTypeComponent } from './components/vehicletype/create-vehicle-type/create-vehicle-type.component';
+import { UpdateVehicleTypeComponent } from './components/vehicletype/update-vehicle-type/update-vehicle-type.component';
+
+
+// Defining the routes for the application
 export const routes: Routes = [
     { 
         path: '', 
-        redirectTo: '/usuarios', 
+        redirectTo: '/users',  // Redirecting to users page by default
         pathMatch: 'full' 
     },
-    // Rutas de Usuarios
+    // Routes for Users
     {
-        path: "usuarios",
-        component: ShowUsersComponent
+        path: "users",
+        component: ShowUsersComponent  // Shows the list of users
     },
     {
-        path: "usuarios/nuevo",
-        component: CrearUsuariosComponent
+        path: "users/new",
+        component: CreateUsersComponent  // Form to create a new user
     },
     {
-        path: "usuarios/edit/:id",
-        component: ActualizarUsuariosComponent
+        path: "users/edit/:id",
+        component: UpdateUsersComponent  // Form to update an existing user by id
+    },
+    // Routes for Employees
+    {
+        path: "employees",
+        component: ShowEmployeesComponent  // Shows the list of employees
     },
     {
-        path: "usuarios/eliminar/:id",
-        component: EliminarUsuariosComponent
-    },
-    // Rutas de Empleados
-    {
-        path: "empleados",
-        component: MostrarEmpleadosComponent
+        path: "employees/new",
+        component: CreateEmployeesComponent  // Form to create a new employee
     },
     {
-        path: "empleados/nuevo",
-        component: CrearEmpleadosComponent
+        path: "employees/edit/:id",
+        component: UpdateEmployeesComponent  // Form to update an existing employee by id
+    },
+    // Routes for Correspondence Type
+    {
+        path: "correspondence-type",
+        component: ShowCorrespondenceTypeComponent  // Shows the list of correspondence types
     },
     {
-        path: "empleados/edit/:id",
-        component: ActualizarEmpleadosComponent
+        path: "correspondence-type/new",
+        component: CreateCorrespondenceTypeComponent  // Form to create a new correspondence type
     },
     {
-        path: "empleados/eliminar/:id",
-        component: EliminarEmpleadosComponent
+        path: "correspondence-type/edit/:id",
+        component: UpdateCorrespondenceTypeComponent  // Form to update a correspondence type by id
     },
-    // Rutas de TipoCorrespondencia
+    // Routes for Correspondence Status
     {
-        path: "tipo-correspondencia",
-        component: MostrarTipoCorrespondenciaComponent
-    },
-    {
-        path: "tipo-correspondencia/nuevo",
-        component: CrearTipoCorrespondenciaComponent
+        path: "correspondence-status",
+        component: ShowCorrespondenceStatusComponent  // Shows the list of correspondence statuses
     },
     {
-        path: "tipo-correspondencia/edit/:id",
-        component: ActualizarTipoCorrespondenciaComponent
+        path: "correspondence-status/new",
+        component: CreateCorrespondenceStatusComponent  // Form to create a new correspondence status
     },
     {
-        path: "tipo-correspondencia/eliminar/:id",
-        component: EliminarTipoCorrespondenciaComponent
+        path: "correspondence-status/edit/:id",
+        component: UpdateCorrespondenceStateComponent  // Form to update a correspondence status by id
     },
-    // Rutas de EstadoCorrespondencia
+    // Routes for Branches
     {
-        path: "estado-correspondencia",
-        component: MostrarEstadoCorrespondenciaComponent
-    },
-    {
-        path: "estado-correspondencia/nuevo",
-        component: CrearEstadoCorrespondenciaComponent
+        path: "branches",
+        component: ShowBranchesComponent  // Shows the list of branches
     },
     {
-        path: "estado-correspondencia/edit/:id",
-        component: ActualizarEstadoCorrespondenciaComponent
+        path: "branches/new",
+        component: CreateBranchesComponent  // Form to create a new branch
     },
     {
-        path: "estado-correspondencia/eliminar/:id",
-        component: EliminarEstadoCorrespondenciaComponent
+        path: "branches/edit/:id",
+        component: UpdateBranchesComponent  // Form to update a branch by id
     },
-    // Rutas de Sucursales
+    // Routes for Transport
     {
-        path: "sucursales",
-        component: MostrarSucursalesComponent
-    },
-    {
-        path: "sucursales/nuevo",
-        component: CrearSucursalesComponent
+        path: "transport",
+        component: ShowTransportComponent  // Shows the list of transport
     },
     {
-        path: "sucursales/edit/:id",
-        component: ActualizarSucursalesComponent
+        path: "transport/new",
+        component: CreateTransportComponent  // Form to create a new transport
     },
     {
-        path: "sucursales/eliminar/:id",
-        component: EliminarSucursalesComponent
+        path: "transport/edit/:id",
+        component: UpdateTransportComponent  // Form to update a transport by id
     },
-    // Rutas de Transporte
+    // Routes for Routes
     {
-        path: "transporte",
-        component: MostrarTransporteComponent
-    },
-    {
-        path: "transporte/nuevo",
-        component: CrearTransporteComponent
+        path: "routes",
+        component: ShowRoutesComponent  // Shows the list of routes
     },
     {
-        path: "transporte/edit/:id",
-        component: ActualizarTransporteComponent
+        path: "routes/new",
+        component: CreateRoutesComponent  // Form to create a new route
     },
     {
-        path: "transporte/eliminar/:id",
-        component: EliminarTransporteComponent
+        path: "routes/edit/:id",
+        component: UpdateRoutesComponent  // Form to update a route by id
     },
-    // Rutas de Rutas
+    // Routes for Correspondence
     {
-        path: "rutas",
-        component: MostrarRutasComponent
-    },
-    {
-        path: "rutas/nuevo",
-        component: CrearRutasComponent
+        path: "correspondence",
+        component: DisplayCorrespondenceComponent  // Shows the list of correspondence
     },
     {
-        path: "rutas/edit/:id",
-        component: ActualizarRutasComponent
+        path: "correspondence/new",
+        component: CreateCorrespondenceComponent  // Form to create a new correspondence
     },
     {
-        path: "rutas/eliminar/:id",
-        component: EliminarRutasComponent
+        path: "correspondence/edit/:id",
+        component: UpdateCorrespondenceComponent  // Form to update correspondence by id
     },
-    // Rutas de Correspondencia
+    // Routes for Payments
     {
-        path: "correspondencia",
-        component: MostrarCorrespondenciaComponent
-    },
-    {
-        path: "correspondencia/nuevo",
-        component: CrearCorrespondenciaComponent
+        path: "payments",
+        component: ShowPaymentsComponent  // Shows the list of payments
     },
     {
-        path: "correspondencia/edit/:id",
-        component: ActualizarCorrespondenciaComponent
+        path: "payments/new",
+        component: CreatePaymentsComponent  // Form to create a new payment
     },
     {
-        path: "correspondencia/eliminar/:id",
-        component: EliminarCorrespondenciaComponent
+        path: "payments/edit/:id",
+        component: UpdatePaymentComponent  // Form to update a payment by id
     },
-    // Rutas de Pagos
+    // Routes for Correspondence Events
     {
-        path: "pagos",
-        component: MostrarPagosComponent
-    },
-    {
-        path: "pagos/nuevo",
-        component: CrearPagosComponent
+        path: "correspondence-events",
+        component: ShowCorrespondenceEventComponent  // Shows the list of correspondence events
     },
     {
-        path: "pagos/edit/:id",
-        component: ActualizarPagosComponent
+        path: "correspondence-events/new",
+        component: CreateCorrespondenceEventComponent  // Form to create a new correspondence event
     },
     {
-        path: "pagos/eliminar/:id",
-        component: EliminarPagosComponent
+        path: "correspondence-events/edit/:id",
+        component: UpdateCorrespondenceEventsComponent  // Form to update a correspondence event by id
     },
-    // Rutas de EventosCorrespondencia
+    // Routes for User Type
     {
-        path: "eventos-correspondencia",
-        component: MostrarEventosCorrespondenciaComponent
-    },
-    {
-        path: "eventos-correspondencia/nuevo",
-        component: CrearEventosCorrespondenciaComponent
+        path: "user-type",
+        component: DisplayUserTypeComponent  // Shows the list of user types
     },
     {
-        path: "eventos-correspondencia/edit/:id",
-        component: ActualizarEventosCorrespondenciaComponent
+        path: "user-type/new",
+        component: CreateUserTypeComponent  // Form to create a new user type
     },
     {
-        path: "eventos-correspondencia/eliminar/:id",
-        component: EliminarEventosCorrespondenciaComponent
+        path: "user-type/edit/:id",
+        component: UpdateUserTypeComponent  // Form to update user type by id
     },
-    // Rutas para Tipo Usuario
+    // Routes for Payment Type
     {
-        path: "tipo-usuario",
-        component: MostrarTipoUsuarioComponent
-    },
-    {
-        path: "tipo-usuario/nuevo",
-        component: CrearTipoUsuarioComponent
+        path: "payment-type",
+        component: ShowPaymentTypeComponent  // Shows the list of payment types
     },
     {
-        path: "tipo-usuario/edit/:id",
-        component: ActualizarTipoUsuarioComponent
+        path: "payment-type/new",
+        component: CreatePaymentTypeComponent  // Form to create a new payment type
     },
     {
-        path: "tipo-usuario/eliminar/:id",
-        component: EliminarTipoUsuarioComponent
+        path: "payment-type/edit/:id",
+        component: UpdatePaymentTypeComponent  // Form to update a payment type by id
     },
-    // Rutas para Tipo Pago
+    // Routes for Employee Type
     {
-        path: "tipo-pago",
-        component: MostrarTipoPagoComponent
-    },
-    {
-        path: "tipo-pago/nuevo",
-        component: CrearTipoPagoComponent
+        path: "employee-type",
+        component: ShowEmployeeTypeComponent  // Shows the list of employee types
     },
     {
-        path: "tipo-pago/edit/:id",
-        component: ActualizarTipoPagoComponent
+        path: "employee-type/new",
+        component: CreateEmployeeTypeComponent  // Form to create a new employee type
     },
     {
-        path: "tipo-pago/eliminar/:id",
-        component: EliminarTipoPagoComponent
+        path: "employee-type/edit/:id",
+        component: UpdateEmployeeTypeComponent  // Form to update employee type by id
     },
-    // Rutas para Tipo Empleado
+    // Routes for Vehicle Type
     {
-        path: "tipo-empleado",
-        component: MostrarTipoEmpleadoComponent
-    },
-    {
-        path: "tipo-empleado/nuevo",
-        component: CrearTipoEmpleadoComponent
+        path: "vehicle-type",
+        component: DisplayVehicleTypeComponent  // Shows the list of vehicle types
     },
     {
-        path: "tipo-empleado/edit/:id",
-        component: ActualizarTipoEmpleadoComponent
+        path: "vehicle-type/new",
+        component: CreateVehicleTypeComponent  // Form to create a new vehicle type
     },
     {
-        path: "tipo-empleado/eliminar/:id",
-        component: EliminarTipoEmpleadoComponent
+        path: "vehicle-type/edit/:id",
+        component: UpdateVehicleTypeComponent  // Form to update vehicle type by id
     },
-    // Rutas para Tipo Vehiculo
-    {
-        path: "tipo-vehiculo",
-        component: MostrarTipoVehiculoComponent
-    },
-    {
-        path: "tipo-vehiculo/nuevo",
-        component: CrearTipoVehiculoComponent
-    },
-    {
-        path: "tipo-vehiculo/edit/:id",
-        component: ActualizarTipoVehiculoComponent
-    },
-    {
-        path: "tipo-vehiculo/eliminar/:id",
-        component: EliminarTipoVehiculoComponent
-    }
 ];

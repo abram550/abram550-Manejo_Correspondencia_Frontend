@@ -1,0 +1,63 @@
+<p-card class="w-12 h-full">
+    <ng-template pTemplate="header">
+        <div class="flex justify-content-between flex-wrap">
+            <h3 class="title ml-4">
+                Transport Records
+            </h3>
+            <div class="mt-2 mr-2">
+                <a 
+                  pButton 
+                  pRipple
+                  label="Create Transport" 
+                  icon="pi pi-plus"
+                  class="bg-cyan-600"
+                  [routerLink]="['/transport/new']">
+                </a>
+            </div>
+        </div>
+    </ng-template>
+
+    <p>
+        <p-table [value]="transports" class="text-center">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>License Plate</th>
+                    <th>Capacity (Kg)</th>
+                    <th>Vehicle Type</th>
+                    <th class="flex justify-content-center flex-wrap">Actions</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-transport>
+                <tr>
+                    <td>{{ transport.plate }}</td>
+                    <td>{{ transport.capacityKg }}</td>
+                    <td>{{ transport.vehicleType?.description }}</td>
+                    <td class="flex justify-content-center">
+                        <button 
+                            pButton 
+                            pRipple
+                            icon="pi pi-print"
+                            class="bg-cyan-600 mr-1">
+                        </button>
+                        <a 
+                            pButton 
+                            pRipple
+                            icon="pi pi-sync"
+                            severity="warning"
+                            class="mr-1"
+                            [routerLink]="['/transport/edit', transport.id]">
+                        </a>
+                        <button 
+                            pButton 
+                            pRipple
+                            severity="danger"
+                            icon="pi pi-eraser"
+                            class="mr-1"
+                            (click)="deleteTransport(transport.id)">
+                        </button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p>
+</p-card>

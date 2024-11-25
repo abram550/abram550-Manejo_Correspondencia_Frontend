@@ -1,0 +1,71 @@
+<p-card class="w-12 h-full">
+    <ng-template pTemplate="header">
+        <div class="flex justify-content-between flex-wrap">
+            <h3 class="ml-4 title">Event Records</h3>
+            <div class="mt-2 mr-2">
+                <!-- Button to create a new event -->
+                <a 
+                  pButton 
+                  pRipple
+                  label="Create Event" 
+                  icon="pi pi-plus"
+                  class="bg-cyan-600"
+                  [routerLink]="['/correspondence-events/new']">
+                </a>
+            </div>
+        </div>
+    </ng-template>
+
+    <p>
+        <!-- Table displaying the list of events -->
+        <p-table [value]="events">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Correspondence</th>
+                    <th>Employee</th>
+                    <th>Event Date</th>
+                    <th>Description</th>
+                    <th class="flex justify-content-center flex-wrap">Actions</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-event>
+                <tr>
+                    <td>{{ event.correspondenceId }}</td>
+                    <td>{{ event.employeeId }}</td>
+                    <td>{{ event.eventDate | date }}</td>
+                    <td>{{ event.description }}</td>
+                    <td>
+                        <!-- Print button for each event -->
+                        <button 
+                            pButton 
+                            pRipple
+                            icon="pi pi-print"
+                            class="bg-cyan-600 mr-1"
+                            aria-label="Print event">
+                        </button>
+                        <!-- Edit button for each event -->
+                        <a 
+                            pButton 
+                            pRipple
+                            icon="pi pi-sync"
+                            severity="warning"
+                            class="mr-1"
+                            [routerLink]="['/correspondence-events/edit', event.id]"
+                            aria-label="Edit event">
+                        </a>
+                        <!-- Delete button for each event -->
+                        <button 
+                            pButton 
+                            pRipple
+                            severity="danger"
+                            icon="pi pi-eraser"
+                            class="mr-1"
+                            (click)="deleteEvent(event.id)"
+                            aria-label="Delete event">
+                        </button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p>
+</p-card>

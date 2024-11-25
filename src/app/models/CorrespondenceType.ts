@@ -1,6 +1,6 @@
 
-  export interface CorrespondenceTypeI {
-    id: number;
-    type: string;
-    status: boolean;
-  }
+export interface CorrespondenceTypeI {
+  id: number;
+  type: string;
+  status: boolean;
+}
